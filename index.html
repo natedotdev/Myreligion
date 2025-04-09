@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to MyReligion</title>
+  <link rel="stylesheet" href="./assests/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to MyReligion</h1>
+    <p class="desc">A complete platform for managing your religious organization with ease.</p>
+    <div class="grid">
+      <!-- System Config Start -->
+      <div class="box">
+        <h2>System Configuration</h2>
+        <button onclick="goToLicenseKey()">Start</button>
+      </div>
+
+      <!-- Login Box -->
+      <div class="box">
+        <h2>Login</h2>
+        <form onsubmit="login(event)">
+          <input type="text" id="username" placeholder="Username" required>
+          <input type="password" id="password" placeholder="Password" required>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
