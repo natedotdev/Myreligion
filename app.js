@@ -15,3 +15,21 @@ function login(event) {
 function goToLicenseKey() {
   window.location.href = 'enter-license.html';
 }
+
+function verifyLicense() {
+  const key = document.getElementById('licenseKey').value.trim();
+  const errorMsg = document.getElementById('errorMsg');
+
+  if (key === '') {
+    errorMsg.textContent = 'License key cannot be empty.';
+    return;
+  }
+
+  // Simulated check - you can later connect this to a backend
+  if (key === 'MYRELIGION2025') {
+    localStorage.setItem('myReligionLicense', key);
+    window.location.href = 'setup-admin.html';
+  } else {
+    errorMsg.textContent = 'Invalid license key. Please try again.';
+  }
+}
