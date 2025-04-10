@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>System Configuration - MyReligion</title>
+  <link rel="stylesheet" href="./assests/style.css" />
+</head>
+<body class="setupPage">
+  <div class="setupContainer">
+    <h2>System Configuration</h2>
+    <p>Setup your Church Management System below.</p>
+    <form id="adminSetupForm" onsubmit="setupSystemConfig(event)">
+      <h3>Church Details</h3>
+      <input type="text" id="churchName" placeholder="Name of Church/Ministry" required />
+      <input type="text" id="churchLocation" placeholder="Church Location" required />
+      <input type="text" id="contactDetail" placeholder="Contact Detail" required />
+      <input type="number" id="congregationSize" placeholder="Congregation Size" required />
+
+      <label class="themeLabel">Select Theme Mode:</label>
+      <div class="themeOptions">
+        <label><input type="radio" name="theme" value="light" checked /> Light</label>
+        <label><input type="radio" name="theme" value="dark" /> Dark</label>
+      </div>
+  </div>
+  <div class="box">
+      <h3>Account Details</h3>
+      <input type="text" id="firstName" placeholder="First Name" required />
+      <input type="text" id="middleName" placeholder="Middle Name" />
+      <input type="text" id="lastName" placeholder="Last Name" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+
+      <select id="credential" required>
+        <option value="">Select Credential</option>
+        <option value="Media">Media</option>
+        <option value="Head Pastor">Head Pastor</option>
+        <option value="Admin">Admin</option>
+      </select>
+
+      <button type="submit">Finish Setup</button>
+      <div class="error" id="setupError"></div>
+    </form>
+</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
