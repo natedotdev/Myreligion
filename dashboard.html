@@ -1,0 +1,45 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - MyReligion</title>
+  <link rel="stylesheet" href="./assests/style.css">
+</head>
+<body>
+<!-- Global Navigation Bar -->
+<nav class="main-navbar">
+  <div class="nav-brand">MyReligion</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="enter-license.html">License</a></li>
+    <li><a href="setup-admin.html">Setup</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+</nav>
+  <main class="dashboard">
+    <h1>Welcome, Admin</h1>
+    <div class="grid">
+      <div class="box clickable" onclick="goToPage('members.html')">
+        <h2>Members</h2>
+        <p>Manage and view member information</p>
+      </div>
+      <div class="box clickable" onclick="goToPage('donations.html')">
+        <h2>Donations</h2>
+        <p>Track and record donations</p>
+      </div>
+      <div class="box clickable" onclick="goToPage('attendance.html')">
+        <h2>Attendance</h2>
+        <p>Record and review attendance</p>
+      </div>
+      <div class="box clickable" onclick="goToPage('welfare.html')">
+        <h2>Welfare</h2>
+        <p>Monitor welfare activities</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
