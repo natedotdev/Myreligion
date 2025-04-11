@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enter License Key - MyReligion</title>
-  <link rel="stylesheet" href="./assests/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enter License - MyReligion</title>
+  <link rel="stylesheet" href="./assests/style.css"/>
 </head>
-<body class="licensePage">
-  <div class="licenseContainer">
-    <h2>Enter License Key</h2>
-    <p>Please enter your license key to begin setting up MyReligion.</p>
-    <input type="text" id="licenseKey" placeholder="Enter your license key here" />
-    <button onclick="verifyLicense()">Continue</button>
-    <div class="error" id="errorMsg"></div>
+<body>
+  <div class="container">
+    <div class="licenseContainer">
+      <h2>Activate Your License</h2>
+      <p>Please enter the license key provided to you by your system administrator.</p>
+      <input type="text" id="licenseKey" placeholder="Enter License Key"/>
+      <button onclick="validateLicense()">Activate</button>
+      <div id="licenseError" class="error"></div>
+    </div>
   </div>
-
   <script src="app.js"></script>
 </body>
 </html>
