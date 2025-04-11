@@ -16,23 +16,23 @@ function goToLicenseKey() {
   window.location.href = 'enter-license.html';
 }
 
-function verifyLicense() {
-  const key = document.getElementById('licenseKey').value.trim();
-  const errorMsg = document.getElementById('errorMsg');
+function validateLicense() {
+  const licenseKey = document.getElementById("licenseKey").value.trim();
+  const licenseError = document.getElementById("licenseError");
 
-  if (key === '') {
-    errorMsg.textContent = 'License key cannot be empty.';
+  if (licenseKey.length < 10) {
+    licenseError.textContent = "Invalid license key. It must be at least 10 characters.";
     return;
   }
 
-  // Simulated check - you can later connect this to a backend
-  if (key === 'MYRELIGION2025') {
-    localStorage.setItem('myReligionLicense', key);
-    window.location.href = 'setup-admin.html';
+  // Simulate license validation
+  if (licenseKey === "VALID-KEY-123") {
+    window.location.href = "setup-admin.html";
   } else {
-    errorMsg.textContent = 'Invalid license key. Please try again.';
+    licenseError.textContent = "License key not recognized. Please try again.";
   }
 }
+
 
 // Handles admin account setup after license verification
 
