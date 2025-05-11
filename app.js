@@ -88,3 +88,19 @@ function setupSystemConfig(event) {
   window.location.href = 'index.html';
 }
 
+// Starter Functions for the member page
+
+function viewMember(id) {
+  alert(`Viewing member with ID: ${id}`);
+}
+
+function editMember(id) {
+  alert(`Editing member with ID: ${id}`);
+}
+
+function deleteMember(id) {
+  const confirmDelete = confirm("Are you sure you want to delete this member?");
+  if (confirmDelete) {
+    alert(`Member ${id} deleted!`);
+  }
+}

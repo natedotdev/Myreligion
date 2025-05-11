@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyReligion | Members</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="main-navbar">
+    <div class="nav-brand">MyReligion</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="members.html" class="active">Members</a></li>
+        <li><a href="#">Settings</a></li>
+        <li class="logoutBtn"><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Content -->
+  <main class="memberContainer">
+    <div class="page-header">
+      <h1>Church Members</h1>
+      <button class="primary-btn" onclick="alert('Add Member page coming soon!')">+ Add Member</button>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Full Name</th>
+            <th>Gender</th>
+            <th>Phone</th>
+            <th>Department</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="members-list">
+          <!-- Sample data, will be dynamically loaded later -->
+          <tr>
+            <td>1</td>
+            <td>Abena Mensah</td>
+            <td>Female</td>
+            <td>+233 24 123 4567</td>
+            <td>Choir</td>
+            <td>
+              <button class="action-btn view" onclick="viewMember(1)">View</button>
+              <button class="action-btn edit" onclick="editMember(1)">Edit</button>
+              <button class="action-btn delete" onclick="deleteMember(1)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
