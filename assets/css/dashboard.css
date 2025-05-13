@@ -1,0 +1,50 @@
+/* Dashboard Grid Boxes */
+.clickable {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.clickable:hover {
+  transform: scale(1.03);
+}
+
+.dashboard.container {
+  margin-top: 30px;
+}
+.box:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  background-color: #f0f4f8;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+.box-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.grid .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.grid .box:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}

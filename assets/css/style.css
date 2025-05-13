@@ -1,0 +1,160 @@
+/*GLOBAL LAYOUT STYLES */
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: #f7f9fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Page content padding for navbar */
+/* Space to prevent navbar from covering content */
+body {
+  padding-top: 10rem; 
+}
+
+/* Global Navigation Bar */
+.main-navbar {
+  width: 100%;
+  background-color: #2c3e50;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #3498db;
+}
+
+.nav-links li a.active {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 2px;
+}
+
+/* Global Grid and Boxes */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.box {
+  background: white;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.box h2 {
+  margin-bottom: 20px;
+  font-size: 1.4em;
+  color: #2c3e50;
+}
+
+/* Shared container for centering */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+input, button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+
+
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6em;
+  }
+
+  .desc {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  .grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .box {
+    padding: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+  .subheading {
+    font-size: 0.9rem;
+  }
+  .box-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+

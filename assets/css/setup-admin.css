@@ -1,0 +1,28 @@
+/* SETUP ADMIN PAGE STYLES */
+.setupPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f9fc;
+  height: 100vh;
+}
+
+.setupContainer {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
+  margin: 30px;
+}
+
+.setupContainer h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.setupContainer input {
+  margin-bottom: 10px;
+}

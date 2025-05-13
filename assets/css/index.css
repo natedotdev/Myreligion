@@ -1,0 +1,25 @@
+/* INDEX PAGE STYLES */
+.indexPage {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  width: 100%;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.indexPage h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.indexPage .desc {
+  font-size: 1.1em;
+  color: #eee;
+  margin-bottom: 30px;
+}
+
+
