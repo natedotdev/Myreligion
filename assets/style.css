@@ -60,7 +60,7 @@ html, body {
 
 /* Page content padding for navbar */
 body {
-  padding-top: 70px; /* Space to prevent navbar from covering content */
+  padding-top: 10rem; /* Space to prevent navbar from covering content */
 }
 
 /* Shared container for centering */
@@ -255,16 +255,42 @@ button:hover {
 }
 
 /* MEMBERS PAGE */
-/* Page Layout */
+
+/* Make header sticky */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Flex the filters + button */
+.header-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .memberContainer {
-  padding: 2rem;
+  padding: 2rem 2rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
 }
 
 .page-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .primary-btn {
@@ -280,18 +306,36 @@ button:hover {
   background-color: #2980b9;
 }
 
-.logoutBtn{
-  background-color: #e74c3c;
-  padding: 5px;
-  border-radius: 5px;
-}
-
 /* Table Styles */
 .table-container {
   overflow-x: auto;
   background: white;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+/* Filter styling */
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-select {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filters label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Make data area scrollable */
+.scroll-area {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-bottom: 1rem;
 }
 
 table {
@@ -300,8 +344,13 @@ table {
   min-width: 600px;
 }
 
+thead {
+  background-color: #007BFF;
+  color: white;
+}
+
 th, td {
-  padding: 1rem;
+  padding: 0.8rem;
   border-bottom: 1px solid #eee;
   text-align: left;
 }
@@ -311,21 +360,39 @@ th {
 }
 
 /* Action Buttons */
+/* Unified style for action buttons */
 .action-btn {
-  margin-right: 0.3rem;
-  padding: 0.4rem 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.7rem;
+  white-space: nowrap;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.85rem;
 }
 
-.action-btn.view { background-color: #2ecc71; color: white; }
-.action-btn.edit { background-color: #f39c12; color: white; }
-.action-btn.delete { background-color: #e74c3c; color: white; }
+.action-buttons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.action-btn.view { background-color: #28a745; color: white; }
+.action-btn.edit { background-color: #f0ad4e; color: white; }
+.action-btn.delete { background-color: #dc3545; color: white; }
 
 .action-btn:hover { opacity: 0.9; }
 
+
+/* Force action column to stay wide enough */
+th:last-child,
+td:last-child {
+  min-width: 220px;  /* Adjust as needed */
+  white-space: nowrap; /* Prevent wrapping inside the cell */
+}
 
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 600px) {

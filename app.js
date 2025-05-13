@@ -88,6 +88,10 @@ function setupSystemConfig(event) {
   window.location.href = 'index.html';
 }
 
+function goToPage(page) {
+  window.location.href = page;
+}
+
 // Starter Functions for the member page
 
 function viewMember(id) {
@@ -104,3 +108,73 @@ function deleteMember(id) {
     alert(`Member ${id} deleted!`);
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var demoMembers = [
+    { id: 1, name: "Abena Mensah", gender: "Female", phone: "+233 24 123 4567", department: "Choir" },
+    { id: 2, name: "Kwame Boateng", gender: "Male", phone: "+233 55 987 1234", department: "Ushering" },
+    { id: 3, name: "Esi Arhin", gender: "Female", phone: "+233 20 876 5432", department: "Media" },
+    { id: 4, name: "Kofi Adu", gender: "Male", phone: "+233 26 333 4444", department: "Choir" }
+  ];
+
+  function renderMembers(members) {
+    var tbody = document.getElementById("members-list");
+    tbody.innerHTML = "";
+
+    for (var i = 0; i < members.length; i++) {
+      var member = members[i];
+      var row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${i + 1}</td>
+        <td>${member.name}</td>
+        <td>${member.gender}</td>
+        <td>${member.phone}</td>
+        <td>${member.department}</td>
+        <td>
+          <div class="action-buttons">
+            <button class="action-btn view" onclick="viewMember(${member.id})">View</button>
+            <button class="action-btn edit" onclick="editMember(${member.id})">Edit</button>
+            <button class="action-btn delete" onclick="deleteMember(${member.id})">Delete</button>
+          </div>
+        </td>
+      `;
+      tbody.appendChild(row);
+    }
+  }
+
+  function populateDepartmentFilter(members) {
+    var departmentSelect = document.getElementById("departmentFilter");
+    var departments = [];
+
+    for (var i = 0; i < members.length; i++) {
+      var dept = members[i].department;
+      if (departments.indexOf(dept) === -1) {
+        departments.push(dept);
+        var option = document.createElement("option");
+        option.value = dept;
+        option.textContent = dept;
+        departmentSelect.appendChild(option);
+      }
+    }
+  }
+
+  function applyFilters() {
+    var gender = document.getElementById("genderFilter").value;
+    var department = document.getElementById("departmentFilter").value;
+
+    var filtered = demoMembers.filter(function (m) {
+      return (gender === "" || m.gender === gender) &&
+             (department === "" || m.department === department);
+    });
+
+    renderMembers(filtered);
+  }
+
+  document.getElementById("genderFilter").addEventListener("change", applyFilters);
+  document.getElementById("departmentFilter").addEventListener("change", applyFilters);
+
+  // Load initial
+  renderMembers(demoMembers);
+  populateDepartmentFilter(demoMembers);
+});
+
